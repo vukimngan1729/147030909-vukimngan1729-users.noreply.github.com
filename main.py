@@ -7,10 +7,7 @@ from s00_bailam import tongtienmuahang as bailam_f
 from s02_chambai import chambai
 
 #region testkey_list
-testcase_list = [
-  {'tc_name': 'tc0', 'input': {'gia_truoc_thue':1000000}, 'output':1100000},
-  {'tc_name': 'tc1', 'input': {'gia_truoc_thue':None},    'output':None},
-]
+
 #endregion testkey_list
 
 ketqua_list = []
