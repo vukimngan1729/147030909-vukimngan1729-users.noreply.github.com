@@ -1,5 +1,5 @@
 #region import bailam_f
-from s00_bailam import get_name_in_email as bailam_f
+from s00_bailam import get_24hformat_hour as bailam_f
 #endregion import bailam_f
 
 
@@ -8,12 +8,23 @@ from s02_chambai import chambai
 
 #region testkey_list
 testcase_list = [
-  {'tc_name': 'tc0', 'input': {'email_list':['ai-btx@gmail.com']                   }, 'output':['ai-btx']             },
-  {'tc_name': 'tc1', 'input': {'email_list':['user1@gmail.com', 'user2@gmail.com'] }, 'output':['user1', 'user2']     },
-  {'tc_name': 'tc2', 'input': {'email_list':[]                                     }, 'output':[]                     },
-  {'tc_name': 'tc3', 'input': {'email_list':['abb#ccc']                            }, 'output':['ERROR invaid email'] },
-  {'tc_name': 'tc4', 'input': {'email_list':[None]                                 }, 'output':['ERROR invaid email'] },
-  {'tc_name': 'tc5', 'input': {'email_list':[None, 'abb#ccc']                      }, 'output':['ERROR invaid email', 'ERROR invaid email'] },
+  {'input': {'hour_str':'6am'}, 'output':'6',     'tc_name': 'tc00'},
+
+  {'input': ['6am'],            'output':'6',     'tc_name': 'tc01'},
+  {'input': ['7 am'],           'output':'7',     'tc_name': 'tc02'},
+  {'input': ['8AM'],            'output':'8',     'tc_name': 'tc03'},
+  {'input': ['9 AM'],           'output':'9',     'tc_name': 'tc04'},
+
+  {'input': ['6pm'],            'output':'18',     'tc_name': 'tc05'},
+  {'input': ['7 pm'],           'output':'19',     'tc_name': 'tc06'},
+  {'input': ['8PM'],            'output':'20',     'tc_name': 'tc07'},
+  {'input': ['9 PM'],           'output':'21',     'tc_name': 'tc08'},
+
+  {'input': ['10 AM'],          'output':'10',     'tc_name': 'tc09'},
+  {'input': ['11 AM'],          'output':'11',     'tc_name': 'tc10'},
+  {'input': ['10 PM'],          'output':'22',     'tc_name': 'tc11'},
+  {'input': ['11 PM'],          'output':'23',     'tc_name': 'tc12'},
+
 ]
 #endregion testkey_list
 
